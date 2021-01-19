@@ -209,7 +209,6 @@ def get_strikes_or_ball(user_input_number, random_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    result = False
 
     user_input_number_str=list(str(user_input_number))
     random_number_str=list(str(random_number))
@@ -231,7 +230,7 @@ def get_strikes_or_ball(user_input_number, random_number):
     if strike_count==3:
         result=True
     # ==================================
-    return result
+    return strike_count,ball_count
 
 
 def is_yes(one_more_input):
@@ -328,8 +327,8 @@ def main():
                 print("End of the Game")
                 break
             
-            if get_strikes_or_ball(int(user_input),random_number):
-        
+            strike,ball=get_strikes_or_ball(int(user_input),random_number)
+            if strike==3:
                 user_input=input("You win, one more(Y/N)?")
                 while(not(is_yes(user_input) or is_no(user_input))):
                     print("Wrong Input, Input again")
