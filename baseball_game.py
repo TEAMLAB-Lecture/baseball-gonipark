@@ -108,9 +108,9 @@ def is_duplicated_number(three_digit):
         count+=1
     
     if count==0:
-        result=True
-    else:
         result=False
+    else:
+        result=True
     # ==================================
     return result
 
@@ -140,7 +140,7 @@ def is_validated_number(user_input_number):
     result=False
     if is_digit(user_input_number):
         if is_between_100_and_999(user_input_number):
-            if is_duplicated_number(user_input_number):
+            if not is_duplicated_number(user_input_number):
                 result=True
     # ==================================
     return result
