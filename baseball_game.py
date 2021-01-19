@@ -102,9 +102,9 @@ def is_duplicated_number(three_digit):
 
     if str_num[0]==str_num[1]:
         count+=1
-    elif str_num[0]==str_num[2]:
+    if str_num[0]==str_num[2]:
         count+=1
-    elif str_num[1]==str_num[2]:
+    if str_num[1]==str_num[2]:
         count+=1
     
     if count==0:
